@@ -104,13 +104,101 @@
     }
 
     .header{
-      background:#4d6691;
-      color:white;
-      padding:40px;
-      margin:-40px -40px 35px -40px;
-      position:relative;
-      overflow:hidden;
+        position: relative;
+        overflow: hidden;
+
+        background: linear-gradient(
+            135deg,
+            #1f3354 0%,
+            #35507c 55%,
+            #4c6b9e 100%
+        );
+
+        color: white;
+
+        padding: 45px 40px 60px;
+        margin: -40px -40px 35px -40px;
     }
+
+    /* ABSTRACT BOX 1 */
+        .header::before{
+        content:'';
+
+        position:absolute;
+
+        width:320px;
+        height:320px;
+
+        background:rgba(255,255,255,0.05);
+
+        top:-180px;
+        right:-60px;
+
+        transform:rotate(35deg);
+
+        border:1px solid rgba(255,255,255,0.08);
+        }
+
+
+        /* ABSTRACT BOX 2 */
+        .header::after{
+        content:'';
+
+        position:absolute;
+
+        width:260px;
+        height:260px;
+
+        background:rgba(255,255,255,0.04);
+
+        top:-140px;
+        right:120px;
+
+        transform:rotate(35deg);
+
+        border:1px solid rgba(255,255,255,0.06);
+        }
+
+    .header-lines{
+        position:absolute;
+
+        inset:0;
+
+        pointer-events:none;
+        }
+
+    .header-lines::before{
+        content:'';
+
+        position:absolute;
+
+        width:420px;
+        height:2px;
+
+        background:rgba(255,255,255,0.18);
+
+        left:-40px;
+        top:95px;
+
+        transform:rotate(-8deg);
+        }
+
+        .header-lines::after{
+        content:'';
+
+        position:absolute;
+
+        width:180px;
+        height:180px;
+
+        border-top:2px solid rgba(255,255,255,0.08);
+        border-right:2px solid rgba(255,255,255,0.08);
+
+        right:40px;
+        top:20px;
+
+        transform:skew(-25deg);
+        }
 
     .name{
       font-size:38px;
